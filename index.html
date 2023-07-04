@@ -25,6 +25,62 @@
       <div class="preloader__background"></div>
       <div class="preloader__logo"><img class="preloader__logo-image" src="assets/img/logo.png" alt="#"></div>
     </div>
+    <div class="menu" data-menu>
+      <div class="menu__overlay"></div>
+      <div class="menu__inner">
+        <div class="menu__close" data-menu-trigger>
+          <svg class="sprite-icon sprite-close false">
+            <use xlink:href="assets/img/sprite.svg#sprite-close"></use>
+          </svg>
+        </div>
+        <div class="menu__content">
+          <div class="menu__item menu__item-nav">
+            <nav class="nav-menu">
+              <ul class="nav-menu__list">
+                <li class="nav-menu__list-item"><span class="nav-menu__list-link">Каталог
+                    <div class="nav__dropdown-arrow"></div></span>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown__list">
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Apple iPhone</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Samsung</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Macbook</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Smart Watch</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">DYSON</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Xiaomi</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-menu__list-item"><span class="nav-menu__list-link">Покупателям
+                    <div class="nav__dropdown-arrow"></div></span>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown__list">
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Покупателям 1</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Покупателям 2</a></li>
+                      <li class="nav__dropdown__list-item"><a class="nav__dropdown__list-link" href="#">Покупателям 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-menu__list-item"><a class="nav-menu__list-link" href="#">Ремонт и сервисный центр</a></li>
+                <li class="nav-menu__list-item"><a class="nav-menu__list-link" href="#">Trade-in</a></li>
+                <li class="nav-menu__list-item"><a class="nav-menu__list-link" href="#">Кредит</a></li>
+                <li class="nav-menu__list-item"><a class="nav-menu__list-link" href="#">Б/У устройства</a></li>
+                <li class="nav-menu__list-item"><a class="nav-menu__list-link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="menu__item">
+            <ul class="social social-menu">
+              <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-vk.svg" alt="" title="ВКонтакте"></a></li>
+              <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-tg.svg" alt="" title="Telegram"></a></li>
+            </ul>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-location-text">Тюмень, ул. ​Сургутская, 11 к4  ежедневно с 10:00 до 20:00</div>
+          </div>
+          <div class="menu__item"><a class="link link-dark link-lg" href="tel:12345678">+7 (3452) 666‒444</a></div>
+        </div>
+      </div>
+    </div>
     <!-- Wrapper-->
     <div class="wrapper">
       <!-- header-->
@@ -32,7 +88,7 @@
         <!-- header-top-->
         <div class="header-top container">
           <!-- header-top: left-->
-          <div class="header-top__left"><a class="header-logo" href="/"><img class="header-logo__image" src="assets/img/logo.png" alt="Logo"></a></div>
+          <div class="header-top__left"><a class="header-logo" href="/"><img class="header-logo__image _dark" src="assets/img/logo.png" alt="Logo"><img class="header-logo__image _light" src="assets/img/logo-light.png" alt="Logo"></a></div>
           <!-- header-top: right-->
           <div class="header-top__right">
             <div class="header-top__middle">
@@ -44,7 +100,7 @@
                       <div class="drop__popup-head">
                         <div class="drop__popup-title">Выберите ваш город</div>
                         <div class="drop__popup-close j-drop-close">
-                          <svg class="sprite-icon sprite-sprite-close">
+                          <svg class="sprite-icon sprite-close false">
                             <use xlink:href="assets/img/sprite.svg#sprite-close"></use>
                           </svg>
                         </div>
@@ -56,7 +112,7 @@
               </div>
               <div class="header-phone"><a class="header-phone__link" href="tel:+73452666444">+7 (3452) 666‒444</a></div>
             </div>
-            <nav class="header-nav">
+            <nav class="nav-main">
               <ul class="nav-list nav-header">
                 <!-- Дла активного состояния использовать класс "is-active" бля блока "nav-item"-->
                 <li class="nav-item is-active"><a class="nav-link" href="/">О нас</a></li>
@@ -77,12 +133,6 @@
                 <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
               </ul>
             </nav>
-            <!-- header-top: sandwich-->
-            <button class="header__sandwich sandwich j-menu-trigger" aria-label="Меню">
-              <div class="sandwich__inner">
-                <div class="sandwich__line"></div>
-              </div>
-            </button>
           </div>
         </div>
         <!-- header-bottom-->
@@ -90,20 +140,29 @@
           <!-- header-bottom: inner-->
           <div class="header-bottom__inner">
             <div class="header-bottom__container container">
+              <!-- header-bottom: sandwich-->
+              <div class="header-bottom__sandwich">
+                <div class="sandwich" data-menu-trigger>
+                  <div class="sandwich__inner">
+                    <div class="sandwich__line"></div>
+                  </div>
+                </div>
+              </div>
               <!-- header-bottom: catalog-->
               <div class="header-bottom__catalog">
                 <button class="btn btn-primary btn-md j-catalog-menu-trigger header-bottom__catalog-btn" type="button" title="Каталог товаров"><span class="btn-icon">
                     <div class="catalog-menu-trigger__open">
-                      <svg class="sprite-icon sprite-sprite-list">
+                      <svg class="sprite-icon sprite-list false">
                         <use xlink:href="assets/img/sprite.svg#sprite-list"></use>
                       </svg>
                     </div>
                     <div class="catalog-menu-trigger__close">
-                      <svg class="sprite-icon sprite-sprite-close">
+                      <svg class="sprite-icon sprite-close false">
                         <use xlink:href="assets/img/sprite.svg#sprite-close"></use>
                       </svg>
                     </div></span><span class="btn-text">Каталог</span></button>
               </div>
+              <!-- header-bottom: logo mobile--><a class="header-bottom__logo-mobile" href="/"><img class="header-logo__image _dark" src="assets/img/logo.png" alt="Logo"><img class="header-logo__image _light" src="assets/img/logo-light.png" alt="Logo"></a>
               <!-- header-bottom: search-->
               <div class="header-bottom__search">
                 <form class="search-main__form">
@@ -117,22 +176,29 @@
                   </label>
                 </form>
               </div>
+              <div class="header-bottom__search-mobile">
+                <div class="header-bottom__search-mobile-btn j-search-popup-trigger">
+                  <svg class="sprite-icon sprite-search false">
+                    <use xlink:href="assets/img/sprite.svg#sprite-search"></use>
+                  </svg>
+                </div>
+              </div>
               <!-- header-bottom: buttons-->
               <div class="header-bottom__controls header-control"><a class="header-control__link" href="#">
                   <div class="header-control__link-icon">
-                    <svg class="sprite-icon sprite-sprite-compare">
+                    <svg class="sprite-icon sprite-compare false">
                       <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                     </svg>
                   </div>
                   <div class="header-control__link-text">Сравнение</div></a><a class="header-control__link" href="#">
                   <div class="header-control__link-icon">
-                    <svg class="sprite-icon sprite-sprite-wishlist">
+                    <svg class="sprite-icon sprite-wishlist false">
                       <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                     </svg>
                   </div>
                   <div class="header-control__link-text">Избранное</div></a><a class="header-control__link header-control__link--cart" href="#">
                   <div class="header-control__link-icon"><span class="header-control__link-badge">1</span>
-                    <svg class="sprite-icon sprite-sprite-cart">
+                    <svg class="sprite-icon sprite-cart false">
                       <use xlink:href="assets/img/sprite.svg#sprite-cart"></use>
                     </svg>
                   </div>
@@ -146,7 +212,7 @@
                 <div class="catalog-menu__inner">
                   <div class="catalog-menu__content container">
                     <ul class="catalog-menu__list">
-                      <li class="catalog-menu__list-item"><a class="catalog-menu__list-link" href="#">Apple</a>
+                      <li class="catalog-menu__list-item is-active"><a class="catalog-menu__list-link" href="#">Apple</a>
                                     <div class="catalog-menu__sublist">
                                       <div class="catalog-menu__sublist-inner">
                                         <div class="catalog-menu__sublist-categories">
@@ -514,7 +580,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <section class="brands">
           <div class="container">
             <div class="brands-list">
               <div class="brands-list__item"><a class="brands-list__link link-black" href="catalog.html">Apple iPhone</a></div>
@@ -527,9 +593,9 @@
             </div>
           </div>
         </section>
-        <section>
+        <section class="advantages">
           <div class="container">
-            <div class="grid-layout grid-layout-3 advantages">
+            <div class="grid-layout grid-layout-3">
               <!-- item 1-->
               <div class="grid-item"><a class="advantages__link _text-black _text-center" href="#">
                   <div class="advantages__link-image-wrap"><img class="advantages__link-image" src="assets/img/image-advantages-1.jpg" alt="Гарантия лучшей цены"></div>
@@ -565,31 +631,47 @@
               </div>
               <div class="heading__right"><a class="link link-light" href="#">Каталог товаров</a></div>
             </div>
-            <div class="grid-layout grid-layout-6 categories">
-              <!-- Item 1-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-1.png" alt="iPhone"></div>
-                  <div class="categories__link-title">iPhone</div></a></div>
-              <!-- Item 2-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-2.png" alt="Whatch"></div>
-                  <div class="categories__link-title">Whatch</div></a></div>
-              <!-- Item 3-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-3.png" alt="AirPods"></div>
-                  <div class="categories__link-title">AirPods</div></a></div>
-              <!-- Item 4-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-4.png" alt="Sasmung"></div>
-                  <div class="categories__link-title">Sasmung</div></a></div>
-              <!-- Item 5-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-5.png" alt="DYSON"></div>
-                  <div class="categories__link-title">DYSON</div></a></div>
-              <!-- Item 6-->
-              <div class="grid-item"><a class="categories__link" href="#">
-                  <div class="categories__link-image-wrap"><img class="categories__link-image" src="assets/img/image-categories-6.png" alt="Xiaomi"></div>
-                  <div class="categories__link-title">Xiaomi</div></a></div>
+            <div class="swiper-container swiper-categories swiper-scroll-on-mobile">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-1.png" alt="iPhone"></div>
+                      <div class="categories-link__title">iPhone</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-2.png" alt="Whatch"></div>
+                      <div class="categories-link__title">Whatch</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-3.png" alt="AirPods"></div>
+                      <div class="categories-link__title">AirPods</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-4.png" alt="Sasmung"></div>
+                      <div class="categories-link__title">Samsung</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-5.png" alt="DYSON"></div>
+                      <div class="categories-link__title">DYSON</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-6.png" alt="Xiaomi"></div>
+                      <div class="categories-link__title">Xiaomi</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-1.png" alt="iPhone"></div>
+                      <div class="categories-link__title">iPhone</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-2.png" alt="Whatch"></div>
+                      <div class="categories-link__title">Whatch</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-3.png" alt="AirPods"></div>
+                      <div class="categories-link__title">AirPods</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-4.png" alt="Sasmung"></div>
+                      <div class="categories-link__title">Samsung</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-5.png" alt="DYSON"></div>
+                      <div class="categories-link__title">DYSON</div></a></div>
+                  <div class="swiper-slide"><a class="categories-link" href="#">
+                      <div class="categories-link__image-wrap"><img class="categories-link__image" src="assets/img/image-categories-6.png" alt="Xiaomi"></div>
+                      <div class="categories-link__title">Xiaomi</div></a></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -597,21 +679,24 @@
           <div class="container">
             <div class="product-tabs">
               <div class="tab tab-fade tab-gray" data-tabs data-tab-hash>
-                <div class="tab-buttons" data-tab-buttons>
-                  <div class="tab-button__item" data-tab-opener="recommend-price">
-                    <button class="tab-button" type="button">Лучшая цена</button>
+                <div class="tab-buttons__wrap">
+                  <div class="tab-buttons" data-tab-buttons>
+                    <div class="tab-button__item" data-tab-opener="recommend-price">
+                      <button class="tab-button" type="button">Лучшая цена</button>
+                    </div>
+                    <div class="tab-button__item" data-tab-opener="recommend-hits">
+                      <button class="tab-button" type="button">Хиты продаж</button>
+                    </div>
+                    <div class="tab-button__item" data-tab-opener="recommend-new">
+                      <button class="tab-button" type="button">Новинки</button>
+                    </div>
                   </div>
-                  <div class="tab-button__item" data-tab-opener="recommend-hits">
-                    <button class="tab-button" type="button">Хиты продаж</button>
-                  </div>
-                  <div class="tab-button__item" data-tab-opener="recommend-new">
-                    <button class="tab-button" type="button">Новинки</button>
-                  </div>
+                  <div class="tab-buttons__right"><a class="link link-light" href="#">Все акции</a></div>
                 </div>
                 <div class="tab-content" data-tab-contents>
                   <div class="tab-content__item" data-tab="recommend-price">
                     <div class="tab-content__item-inner">
-                      <div class="swiper-container swiper-products">
+                      <div class="swiper-container swiper-products swiper-scroll-on-mobile">
                         <div class="swiper">
                           <div class="swiper-wrapper">
                             <!-- slide-->
@@ -623,12 +708,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -683,12 +768,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -743,12 +828,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -803,12 +888,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -863,12 +948,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -923,12 +1008,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -981,7 +1066,7 @@
                   </div>
                   <div class="tab-content__item" data-tab="recommend-hits">
                     <div class="tab-content__item-inner">
-                      <div class="swiper-container swiper-products">
+                      <div class="swiper-container swiper-products swiper-scroll-on-mobile">
                         <div class="swiper">
                           <div class="swiper-wrapper">
                             <!-- slide-->
@@ -993,12 +1078,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1053,12 +1138,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1113,12 +1198,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1173,12 +1258,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1233,12 +1318,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1293,12 +1378,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1351,7 +1436,7 @@
                   </div>
                   <div class="tab-content__item" data-tab="recommend-new">
                     <div class="tab-content__item-inner">
-                      <div class="swiper-container swiper-products">
+                      <div class="swiper-container swiper-products swiper-scroll-on-mobile">
                         <div class="swiper">
                           <div class="swiper-wrapper">
                             <!-- slide-->
@@ -1363,12 +1448,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1423,12 +1508,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1483,12 +1568,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1543,12 +1628,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1603,12 +1688,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1663,12 +1748,12 @@
                                           <!-- card-actions: favorites-->
                                           <!-- .is-active - Активное состояние-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в закладки"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-wishlist">
+                                              <svg class="sprite-icon sprite-wishlist false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
                                               </svg></span></button>
                                           <!-- card-actions: compare-->
                                           <button class="btn btn-sm btn-gray-link _icon" title="Добавить в сравнение"><span class="btn-icon">
-                                              <svg class="sprite-icon sprite-sprite-compare">
+                                              <svg class="sprite-icon sprite-compare false">
                                                 <use xlink:href="assets/img/sprite.svg#sprite-compare"></use>
                                               </svg></span></button>
                                         </div>
@@ -1727,34 +1812,36 @@
       </main>
       <!-- footer-->
       <footer class="footer">
-        <!-- footer: top-->
-        <div class="footer-top container">
-          <div class="footer-top__left"><a class="footer-top__logo" href="/"><img class="footer-top__logo-image" src="assets/img/logo.png" alt="Logo"></a>
-            <div class="footer-top__nav">
-              <ul class="nav-list nav-footer">
-                <li class="nav-item"><a class="nav-link" href="/">О нас</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Доставка и оплата</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Доставка и оплата</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-              </ul>
+        <div class="container">
+          <!-- footer: top-->
+          <div class="footer-top">
+            <div class="footer-top__left"><a class="footer-top__logo" href="/"><img class="footer-top__logo-image" src="assets/img/logo.png" alt="Logo"></a>
+              <div class="footer-top__nav">
+                <ul class="nav-list nav-footer">
+                  <li class="nav-item"><a class="nav-link" href="/">О нас</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Доставка и оплата</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Доставка и оплата</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-top__right">
+              <div class="footer-top__social">
+                <ul class="social social-footer">
+                  <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-vk.svg" alt="" title="ВКонтакте"></a></li>
+                  <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-tg.svg" alt="" title="Telegram"></a></li>
+                </ul>
+              </div>
+              <div class="footer-top__contacts"><a class="footer-top__contacts-phone" href="tel:+73452666444">+7 (3452) 666‒444</a>
+                <div class="footer-top__contacts-place">Тюмень, ул. ​Сургутская, 11 к4  / ежедневно с 10:00 до 20:00</div>
+              </div>
             </div>
           </div>
-          <div class="footer-top__right">
-            <div class="footer-top__social">
-              <ul class="social social-footer">
-                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-vk.svg" alt="" title="ВКонтакте"></a></li>
-                <li class="social__item"><a class="social__link" href="#" target="_blank" rel="noopener"><img class="social__link-icon" src="assets/img/icons/social-tg.svg" alt="" title="Telegram"></a></li>
-              </ul>
-            </div>
-            <div class="footer-top__contacts"><a class="footer-top__contacts-phone" href="tel:+73452666444">+7 (3452) 666‒444</a>
-              <div class="footer-top__contacts-place">Тюмень, ул. ​Сургутская, 11 к4  / ежедневно с 10:00 до 20:00</div>
-            </div>
-          </div>
-        </div>
-        <!-- footer: bottom-->
-        <div class="footer-bottom container">
-          <div class="footer-bottom__left"><a class="footer-bottom__copyright link link-gray" href="#">Согласие на обработку персональных данных</a>
+          <!-- footer: bottom-->
+          <div class="footer-bottom">
+            <div class="footer-bottom__left"><a class="footer-bottom__copyright link link-gray" href="#">Согласие на обработку персональных данных</a></div>
+            <div class="footer-bottom__right"><img class="footer-bottom__image" src="assets/img/image-paysystems.png" alt="Платежные системы"></div>
             <div class="footer-bottom__nav">
               <ul class="nav-list nav-bottom">
                 <li class="nav-item"><a class="nav-link" href="/">Условия оплаты</a></li>
@@ -1764,9 +1851,65 @@
               </ul>
             </div>
           </div>
-          <div class="footer-bottom__right"><img class="footer-bottom__image" src="assets/img/image-paysystems.png" alt="Платежные системы"></div>
         </div>
       </footer>
+      <!-- search-popup-->
+      <div class="search-popup">
+        <div class="container search-popup__container">
+          <form class="search-popup__form" action="#">
+            <div class="search-popup__input-wrap">
+              <button class="btn btn-gray-link btn-xs _icon search-popup__button-submit" type="submit">
+                <svg class="sprite-icon sprite-search false">
+                  <use xlink:href="assets/img/sprite.svg#sprite-search"></use>
+                </svg>
+              </button>
+              <input class="search-popup__input" type="text" placeholder="Что вы ищете?" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+              <button class="btn btn-gray-link btn-xs _icon search-popup__button-close" type="button">
+                <svg class="sprite-icon sprite-close false">
+                  <use xlink:href="assets/img/sprite.svg#sprite-close"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="search-popup__badges"><a class="search-popup__badges-item" href="#">Apple iPhone</a><a class="search-popup__badges-item" href="#">Samsung</a><a class="search-popup__badges-item" href="#">Macbook</a><a class="search-popup__badges-item" href="#">Smart Watch</a><a class="search-popup__badges-item" href="#">Xiaomi</a></div>
+          <div class="search-popup__content">
+            <ul class="search-popup__list">
+              <li class="search-popup__list-item"><a class="search-popup__list-link" href="#">Смартфон Xiaomi 12X, 8+256ГБ, Серый</a></li>
+              <li class="search-popup__list-item"><a class="search-popup__list-link" href="#">Смартфон Xiaomi 12X, 8+256ГБ, Серый</a></li>
+              <li class="search-popup__list-item"><a class="search-popup__list-link" href="#">Смартфон Xiaomi 12X, 8+256ГБ, Серый</a></li>
+              <li class="search-popup__list-item"><a class="search-popup__list-link" href="#">Смартфон Xiaomi 12X, 8+256ГБ, Серый</a></li>
+            </ul>
+            <div class="search-popup__more-button-wrap"><a class="search-popup__more-button btn btn-dark-hollow btn-md btn-block" href="#">Все результаты поиска</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile-menu-->
+      <div class="mobile-menu">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/">
+                <svg class="sprite-icon sprite-home mobile-menu__nav-icon">
+                  <use xlink:href="assets/img/sprite.svg#sprite-home"></use>
+                </svg><span class="mobile-menu__nav-title">Главная</span></a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="catalog.html">
+                <svg class="sprite-icon sprite-catalog mobile-menu__nav-icon">
+                  <use xlink:href="assets/img/sprite.svg#sprite-catalog"></use>
+                </svg><span class="mobile-menu__nav-title">Каталог</span></a></li>
+            <li class="mobile-menu__nav-item is-active"><a class="mobile-menu__nav-link" href="cart.html"><span class="mobile-menu__nav-badge">1</span>
+                <svg class="sprite-icon sprite-cart mobile-menu__nav-icon">
+                  <use xlink:href="assets/img/sprite.svg#sprite-cart"></use>
+                </svg><span class="mobile-menu__nav-title">Корзина</span></a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="/cart">
+                <svg class="sprite-icon sprite-wishlist mobile-menu__nav-icon">
+                  <use xlink:href="assets/img/sprite.svg#sprite-wishlist"></use>
+                </svg><span class="mobile-menu__nav-title">Избранное</span></a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">
+                <svg class="sprite-icon sprite-user mobile-menu__nav-icon">
+                  <use xlink:href="assets/img/sprite.svg#sprite-user"></use>
+                </svg><span class="mobile-menu__nav-title">Профиль</span></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!-- Cookie-->
     <div class="cookie j-cookie">
